@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Counter</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script type="text/javascript" defer>
+                document.addEventListener('alpine:init', () => {
+                        Alpine.data('counter', () => ({
+                                val: 0,
+                                add() { this.val++ },
+                                remove() { if (this.val > 0) { this.val-- }},
+                                reset() { this.val = 0 }
+                        }))
+                })
+        </script>
+        <script src="https://unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+        <div x-data="counter" class="flex flex-col justify-center items-center h-screen bg-blue-200">
+                <div class="flex flex-col justify-center items-center px-16 py-8 bg-white rounded drop-shadow-md">
+                        <div x-text="val" class="text-blue-800 text-6xl"></div>
+                        <div class="mt-8 space-x-4">
+                                <button x-on:click="add()" class="px-2 py-1 rounded bg-green-400 hover:bg-green-500" type="button">Add</button>
+                                <button x-on:click="remove()" class="px-2 py-1 rounded bg-yellow-400 hover:bg-yellow-500" type="button">Remove</button>
+                                <button x-on:click="reset()" class="px-2 py-1 rounded bg-red-400 hover:bg-red-500" type="button">Reset</button>
+                        </div>
+                </div>
+        </div>
+</body>
+</html>
