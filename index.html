@@ -20,13 +20,17 @@
 </head>
 <body>
         <div x-data="counter" class="flex flex-col justify-center items-center h-screen bg-blue-200">
-                <div class="flex flex-col justify-center items-center md:px-16 md:py-8 p-4 bg-white rounded drop-shadow-md">
+                <div class="flex flex-col justify-center items-center md:px-16 md:py-8 p-6 bg-white rounded drop-shadow-md">
                         <div x-text="val" class="text-blue-800 text-6xl"></div>
-                        <div class="mt-8 md:space-x-4">
-                                <button x-on:click="add()" class="text-xl px-8 py-4 rounded bg-green-400 hover:bg-green-500" type="button">Add</button>
-                                <button x-on:click="remove()" class="text-xl px-8 py-4 rounded bg-yellow-400 hover:bg-yellow-500" type="button">Remove</button>
+                        <div class="mt-8 space-x-4">
+                                <button x-on:click="add()" class="text-xl p-4 rounded bg-green-400 hover:bg-green-500" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="44" height="44"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                                </button>
+                                <button x-on:click="remove()" class="text-xl p-4 rounded bg-yellow-400 hover:bg-yellow-500" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="44" height="44"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
+                                </button>
                         </div>
-                        <button x-on:click="reset()" class="mt-1 md:mt-4 text-xl px-8 py-4 w-full rounded bg-red-400 hover:bg-red-500" type="button">Reset</button>
+                        <button x-on:click="reset()" class="mt-4 text-xl px-8 py-4 w-full rounded bg-red-400 hover:bg-red-500" type="button">Reset</button>
                 </div>
         </div>
 </body>
